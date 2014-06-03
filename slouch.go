@@ -41,8 +41,7 @@ func (s *StompClient) Connect(headers http.Header) error {
   var connect = "CONNECT\n" +
   headerString +
   "\n" +
-  "\u0000" +
-  "\n"
+  "\u0000"
 
   return s.Conn.WriteMessage(connect)
 }
